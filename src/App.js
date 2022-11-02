@@ -2,9 +2,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./Components/MusicTable/MusicTable.jsx";
 import MusicTable from "./Components/MusicTable/MusicTable.jsx";
+import SearchBar from "./Components/SearchBar/SearchBar.jsx";
 
 function App() {
   const [songs, setSongs] = useState([]);
+  // const [searchCriteria, setSearchCriteria] = useState("");
 
   useEffect(() => {
     getAllSongs();
@@ -15,9 +17,23 @@ function App() {
     setSongs(response.data);
   }
 
+  function filterByCriteria(criteria) {
+    let result = songs.filter((song) => {
+      return (
+        song.title === criteria ||
+        song.artist === criteria ||
+        song.album === criteria ||
+        song.release_date === criteria ||
+        song.genre === criteria
+      );
+    });
+    console.log(result);
+  }
+
   return (
     <div>
       <MusicTable songs={songs} />
+      <SearchBar filterByCriteria={filterByCriteria} />
       {/* <button onClick={() => getAllSongs()}> Get All Songs</button> */}
     </div>
   );
