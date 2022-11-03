@@ -5,6 +5,7 @@ import MusicTable from "./Components/MusicTable/MusicTable.jsx";
 import SearchBar from "./Components/SearchBar/SearchBar.jsx";
 import AddSong from "./Components/AddSong/AddSong.jsx";
 import UpdateSong from "./Components/UpdateSong/UpdateSong.jsx";
+import DeleteSong from "./Components/DeleteSong/DeleteSong.jsx";
 
 function App() {
   const [songs, setSongs] = useState([]);
@@ -38,6 +39,7 @@ function App() {
       <SearchBar filterByCriteria={filterByCriteria} />
       <AddSong getAllSongs={getAllSongs} />
       <UpdateSong songs={songs} getAllSongs={getAllSongs} />
+      <DeleteSong songs={songs} getAllSongs={getAllSongs} />
       {/* <button onClick={() => getAllSongs()}> Get All Songs</button> */}
     </div>
   );
