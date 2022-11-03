@@ -1,13 +1,13 @@
 import { Table, Container, Button, Modal } from "react-bootstrap";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./MusicTable.css";
 import EditButton from "../EditButton/EditButton";
 
-const MusicTable = ({ songs, getAllSongs }) => {
+const SearchTable = ({ songs, getAllSongs, result }) => {
+  console.log(result);
   return (
     <Container>
-      <h3>Music Library</h3>
+      <h3>Search Results</h3>
       <Table striped hover>
         <thead>
           <tr>
@@ -20,7 +20,7 @@ const MusicTable = ({ songs, getAllSongs }) => {
           </tr>
         </thead>
         <tbody>
-          {songs.map((song) => {
+          {result.map((song) => {
             return (
               <tr>
                 <td>{song.id}</td>
@@ -48,4 +48,4 @@ const MusicTable = ({ songs, getAllSongs }) => {
   );
 };
 
-export default MusicTable;
+export default SearchTable;

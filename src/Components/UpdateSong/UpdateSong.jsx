@@ -7,14 +7,15 @@ import {
   FormControl,
   FormLabel,
 } from "react-bootstrap";
+import { propTypes } from "react-bootstrap/esm/Image";
 
-const UpdateSong = ({ songs, getAllSongs }) => {
-  const [id, setId] = useState(0);
-  const [title, setTitle] = useState("");
-  const [artist, setArtist] = useState("");
-  const [album, setAlbum] = useState("");
-  const [release_date, setReleaseDate] = useState("");
-  const [genre, setGenre] = useState("");
+const UpdateSong = ({ songs, getAllSongs, song }) => {
+  const [id, setId] = useState(song.song.id);
+  const [title, setTitle] = useState(song.song.title);
+  const [artist, setArtist] = useState(song.song.artist);
+  const [album, setAlbum] = useState(song.song.album);
+  const [release_date, setReleaseDate] = useState(song.song.release_date);
+  const [genre, setGenre] = useState(song.song.genre);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -37,12 +38,10 @@ const UpdateSong = ({ songs, getAllSongs }) => {
       await getAllSongs();
     }
   }
-
   return (
     <Container>
-      <h4>Update Song</h4>
-      <Container></Container>
       <Form onSubmit={handleSubmit}>
+        <h4>Update Song</h4>
         <FormLabel>Song ID</FormLabel>
         <FormControl
           type="number"
@@ -53,7 +52,6 @@ const UpdateSong = ({ songs, getAllSongs }) => {
         />
         <FormLabel>Title</FormLabel>
         <FormControl
-          placeholder={title}
           type="text"
           id="SongData"
           name="SongData"
@@ -62,7 +60,6 @@ const UpdateSong = ({ songs, getAllSongs }) => {
         />
         <FormLabel>Artist</FormLabel>
         <FormControl
-          placeholder={artist}
           type="text"
           id="SongData"
           name="SongData"
@@ -71,7 +68,6 @@ const UpdateSong = ({ songs, getAllSongs }) => {
         />
         <FormLabel>Album</FormLabel>
         <FormControl
-          placeholder={album}
           type="text"
           id="SongData"
           name="SongData"
@@ -80,7 +76,6 @@ const UpdateSong = ({ songs, getAllSongs }) => {
         />
         <FormLabel>Release Date</FormLabel>
         <FormControl
-          placeholder={release_date}
           type="text"
           id="SongData"
           name="SongData"
@@ -89,7 +84,6 @@ const UpdateSong = ({ songs, getAllSongs }) => {
         />
         <FormLabel>Genre</FormLabel>
         <FormControl
-          placeholder={genre}
           type="text"
           id="SongData"
           name="SongData"

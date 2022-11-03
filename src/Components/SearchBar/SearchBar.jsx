@@ -7,7 +7,6 @@ const SearchBar = ({ filterByCriteria }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     let searchBox = document.querySelector("#searchCriteria");
-    console.log(searchBox.value);
     filterByCriteria(searchBox.value);
   };
 
@@ -27,7 +26,7 @@ const SearchBar = ({ filterByCriteria }) => {
           value={searchCriteria}
         />
         <Container>
-          <Button>Submit</Button>
+          <Button onClick={handleSubmit}>Submit</Button>
         </Container>
       </Form>
     </Container>
