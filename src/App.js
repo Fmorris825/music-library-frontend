@@ -1,9 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import "./Components/MusicTable/MusicTable.jsx";
+
 import MusicTable from "./Components/MusicTable/MusicTable.jsx";
 import SearchBar from "./Components/SearchBar/SearchBar.jsx";
 import AddSong from "./Components/AddSong/AddSong.jsx";
+import UpdateSong from "./Components/UpdateSong/UpdateSong.jsx";
 
 function App() {
   const [songs, setSongs] = useState([]);
@@ -36,6 +37,7 @@ function App() {
       <MusicTable songs={songs} />
       <SearchBar filterByCriteria={filterByCriteria} />
       <AddSong getAllSongs={getAllSongs} />
+      <UpdateSong songs={songs} getAllSongs={getAllSongs} />
       {/* <button onClick={() => getAllSongs()}> Get All Songs</button> */}
     </div>
   );

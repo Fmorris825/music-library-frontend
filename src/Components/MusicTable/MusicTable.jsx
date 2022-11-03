@@ -4,6 +4,7 @@ const MusicTable = ({ songs }) => {
       <table>
         <thead>
           <tr>
+            <th>Song ID</th>
             <th>Song Title</th>
             <th>Artist</th>
             <th>Album</th>
@@ -15,6 +16,7 @@ const MusicTable = ({ songs }) => {
           {songs.map((song) => {
             return (
               <tr>
+                <td>{song.id}</td>
                 <td>{song.title}</td>
                 <td>{song.artist}</td>
                 <td>{song.album}</td>
