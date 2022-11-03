@@ -1,7 +1,12 @@
+import { Table, Container } from "react-bootstrap";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
 const MusicTable = ({ songs }) => {
   return (
-    <div>
-      <table>
+    <Container>
+      <h3>Music Library</h3>
+      <Table striped bordered hover>
         <thead>
           <tr>
             <th>Song ID</th>
@@ -26,8 +31,8 @@ const MusicTable = ({ songs }) => {
             );
           })}
         </tbody>
-      </table>
-    </div>
+      </Table>
+    </Container>
   );
 };
 

@@ -29,8 +29,8 @@ const DeleteSong = ({ songs, getAllSongs }) => {
 
   return (
     <Container>
+      <h4>Delete Song</h4>
       <Form onSubmit={handleSubmit}>
-        <FormLabel>Delete Song</FormLabel>
         <FormControl
           type="number"
           id="SongData"

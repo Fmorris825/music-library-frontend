@@ -78,9 +78,9 @@ const AddSong = ({ getAllSongs }) => {
             value={genre}
           />
         </FormGroup>
-        <div>
+        <Container>
           <Button>Submit</Button>
-        </div>
+        </Container>
       </Form>
     </Container>
   );
