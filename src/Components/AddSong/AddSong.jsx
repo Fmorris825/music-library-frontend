@@ -1,6 +1,17 @@
 import { useState } from "react";
 import axios from "axios";
 
+import {
+  Button,
+  Form,
+  FormControl,
+  FormLabel,
+  FormGroup,
+  Container,
+} from "react-bootstrap";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
 const AddSong = ({ getAllSongs }) => {
   const [title, setTitle] = useState("");
   const [artist, setArtist] = useState("");
@@ -33,46 +44,45 @@ const AddSong = ({ getAllSongs }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        id="SongData"
-        name="SongData"
-        onChange={(event) => setTitle(event.target.value)}
-        value={title}
-      />
-      <input
-        type="text"
-        id="SongData"
-        name="SongData"
-        onChange={(event) => setArtist(event.target.value)}
-        value={artist}
-      />
-      <input
-        type="text"
-        id="SongData"
-        name="SongData"
-        onChange={(event) => setAlbum(event.target.value)}
-        value={album}
-      />
-      <input
-        type="text"
-        id="SongData"
-        name="SongData"
-        onChange={(event) => setReleaseDate(event.target.value)}
-        value={release_date}
-      />
-      <input
-        type="text"
-        id="SongData"
-        name="SongData"
-        onChange={(event) => setGenre(event.target.value)}
-        value={genre}
-      />
-      <div>
-        <button>Submit</button>
-      </div>
-    </form>
+    <Container>
+      <Form onSubmit={handleSubmit}>
+        <FormGroup>
+          <FormLabel>Title</FormLabel>
+          <FormControl
+            type="text"
+            onChange={(event) => setTitle(event.target.value)}
+            value={title}
+          />
+          <FormLabel>Artist</FormLabel>
+          <FormControl
+            type="text"
+            onChange={(event) => setArtist(event.target.value)}
+            value={artist}
+          />
+          <FormLabel>Album</FormLabel>
+          <FormControl
+            type="text"
+            onChange={(event) => setAlbum(event.target.value)}
+            value={album}
+          />
+          <FormLabel>Release Date</FormLabel>
+          <FormControl
+            type="date"
+            onChange={(event) => setReleaseDate(event.target.value)}
+            value={release_date}
+          />
+          <FormLabel>Genre</FormLabel>
+          <FormControl
+            type="text"
+            onChange={(event) => setGenre(event.target.value)}
+            value={genre}
+          />
+        </FormGroup>
+        <div>
+          <Button>Submit</Button>
+        </div>
+      </Form>
+    </Container>
   );
 };
 

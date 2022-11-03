@@ -1,5 +1,14 @@
 import axios from "axios";
 import React, { useState } from "react";
+import {
+  Button,
+  Form,
+  FormControl,
+  FormLabel,
+  Container,
+} from "react-bootstrap";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const DeleteSong = ({ songs, getAllSongs }) => {
   const [id, setId] = useState(0);
@@ -19,18 +28,21 @@ const DeleteSong = ({ songs, getAllSongs }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="number"
-        id="SongData"
-        name="SongData"
-        onChange={(event) => setId(event.target.value)}
-        value={id}
-      />
-      <div>
-        <button>Submit</button>
-      </div>
-    </form>
+    <Container>
+      <Form onSubmit={handleSubmit}>
+        <FormLabel>Delete Song</FormLabel>
+        <FormControl
+          type="number"
+          id="SongData"
+          name="SongData"
+          onChange={(event) => setId(event.target.value)}
+          value={id}
+        />
+        <div>
+          <Button>Submit</Button>
+        </div>
+      </Form>
+    </Container>
   );
 };
 
