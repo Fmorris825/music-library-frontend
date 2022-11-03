@@ -17,7 +17,7 @@ const SearchBar = ({ filterByCriteria }) => {
         Enter the Title, Artist, album, Release Date, or Genre of song, to look
         it up.
       </Container>
-      <Form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <FormControl
           type="text"
           id="searchCriteria"
@@ -26,9 +26,9 @@ const SearchBar = ({ filterByCriteria }) => {
           value={searchCriteria}
         />
         <Container>
-          <Button onClick={handleSubmit}>Submit</Button>
+          <Button type="submit">Submit</Button>
         </Container>
-      </Form>
+      </form>
     </Container>
   );
 };

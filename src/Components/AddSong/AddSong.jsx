@@ -45,6 +45,7 @@ const AddSong = ({ getAllSongs }) => {
 
   return (
     <Container>
+      <h4>Add Song</h4>
       <Form onSubmit={handleSubmit}>
         <FormGroup>
           <FormLabel>Title</FormLabel>
@@ -79,7 +80,7 @@ const AddSong = ({ getAllSongs }) => {
           />
         </FormGroup>
         <Container>
-          <Button>Submit</Button>
+          <Button onClick={handleSubmit}>Submit</Button>
         </Container>
       </Form>
     </Container>

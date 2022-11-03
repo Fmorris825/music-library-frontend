@@ -26,6 +26,7 @@ const EditButton = (song, songs, getAllSongs) => {
     event.preventDefault();
     UpdateSong();
     handleClose();
+    getAllSongs();
   };
 
   async function UpdateSong() {
@@ -62,8 +63,8 @@ const EditButton = (song, songs, getAllSongs) => {
         </Modal.Header>
 
         <Modal.Body>
-          <Container>
-            <Form onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit}>
+            <Container>
               <h4>Update Song</h4>
               <FormLabel>Song ID</FormLabel>
               <FormControl
@@ -113,14 +114,14 @@ const EditButton = (song, songs, getAllSongs) => {
                 onChange={(event) => setGenre(event.target.value)}
                 value={genre}
               />
-            </Form>
-          </Container>
+              <Container>
+                <Button type="submit">Submit</Button>
+              </Container>
+            </Container>
+          </Form>
         </Modal.Body>
 
         <Modal.Footer>
-          <Container>
-            <Button onClick={handleSubmit}>Submit</Button>
-          </Container>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>

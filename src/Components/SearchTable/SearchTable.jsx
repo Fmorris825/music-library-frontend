@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import EditButton from "../EditButton/EditButton";
 
 const SearchTable = ({ songs, getAllSongs, result }) => {
-  console.log(result);
   return (
     <Container>
       <h3>Search Results</h3>
