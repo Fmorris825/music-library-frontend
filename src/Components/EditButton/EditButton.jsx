@@ -47,7 +47,7 @@ const EditButton = ({ song, getAllSongs }) => {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button id="button" variant="primary" onClick={handleShow}>
         Edit
       </Button>
 

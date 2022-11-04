@@ -2,6 +2,7 @@ import { Table, Container, Button, Modal } from "react-bootstrap";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./MusicTable.css";
+import "/Users/fredmorris/DevCodeCamp/music-library-frontend/src/App.css";
 import EditButton from "../EditButton/EditButton";
 import DeleteButton from "../DeleteButton/DeleteButton";
 

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "/Users/fredmorris/DevCodeCamp/music-library-frontend/src/App.css";
 import { Button, Container, Form, FormControl } from "react-bootstrap";
 
 const SearchBar = ({ filterByCriteria, getAllSongs }) => {
@@ -26,8 +27,12 @@ const SearchBar = ({ filterByCriteria, getAllSongs }) => {
           value={searchCriteria}
         />
         <Container>
-          <Button type="submit">Submit</Button>
-          <Button onClick={getAllSongs}>Search Again</Button>
+          <Button id="button" type="submit">
+            Submit
+          </Button>
+          <Button id="button" onClick={getAllSongs}>
+            Search Again
+          </Button>
         </Container>
       </form>
     </Container>
