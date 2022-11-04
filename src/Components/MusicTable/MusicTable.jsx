@@ -44,7 +44,7 @@ const MusicTable = ({ songs, getAllSongs }) => {
           })}
         </tbody>
       </Table>
-      <Button onClick={getAllSongs}>Refresh Table</Button>
+      {/* <Button onClick={getAllSongs}>Refresh Table</Button> */}
     </Container>
   );
 };

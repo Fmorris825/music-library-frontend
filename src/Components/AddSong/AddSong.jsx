@@ -21,12 +21,12 @@ const AddSong = ({ getAllSongs }) => {
     event.preventDefault();
     // let newSongForm = document.querySelector("#SongData");
     // console.log(title, artist, album, release_date, genre);
-    addSong();
-    setTitle();
-    setArtist();
-    setAlbum();
-    setReleaseDate();
-    setGenre();
+    addSong("");
+    setTitle("");
+    setArtist("");
+    setAlbum("");
+    setReleaseDate("");
+    setGenre("");
   };
 
   async function addSong() {
@@ -49,6 +49,9 @@ const AddSong = ({ getAllSongs }) => {
   return (
     <Container>
       <h4>Add Song</h4>
+      <Container>
+        Fill in the Criteria below for the song yoou would like to add.
+      </Container>
       <Form onSubmit={handleSubmit}>
         <FormGroup>
           <FormGroup>
