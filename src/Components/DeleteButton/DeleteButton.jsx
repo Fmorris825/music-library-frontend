@@ -9,9 +9,6 @@ import {
   Container,
 } from "react-bootstrap";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "/Users/fredmorris/DevCodeCamp/music-library-frontend/src/App.css";
-
 const DeleteButton = ({ song, getAllSongs }) => {
   const [show, setShow] = useState(false);
   const [id, setId] = useState(song.id);

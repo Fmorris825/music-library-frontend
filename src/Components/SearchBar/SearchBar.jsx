@@ -20,6 +20,7 @@ const SearchBar = ({ filterByCriteria, getAllSongs }) => {
       </Container>
       <form onSubmit={handleSubmit}>
         <FormControl
+          className="shadow p-2 mb-2 bg-body rounded"
           type="text"
           id="searchCriteria"
           name="searchCriteria"

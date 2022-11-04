@@ -1,3 +1,6 @@
+body {
+  background-color: #e6e6fa;
+}
 .Body {
   align-items: center;
 }
@@ -8,4 +11,11 @@ h4 {
 
 #button {
   margin: 5px;
+  background-color: #9400d3;
+  border: #9400d3;
+}
+#button:hover {
+  background-color: #e6e6fa;
+  border: #e6e6fa;
+  color: #8a2be2;
 }

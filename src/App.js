@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import MusicTable from "./Components/MusicTable/MusicTable.jsx";
 import SearchBar from "./Components/SearchBar/SearchBar.jsx";
 import AddSong from "./Components/AddSong/AddSong.jsx";
-import SearchTable from "./Components/SearchTable/SearchTable.jsx";
 
 import { Container } from "react-bootstrap";
 
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {

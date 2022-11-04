@@ -10,9 +10,6 @@ import {
   Container,
 } from "react-bootstrap";
 
-import "/Users/fredmorris/DevCodeCamp/music-library-frontend/src/App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-
 const AddSong = ({ getAllSongs }) => {
   const [title, setTitle] = useState("");
   const [artist, setArtist] = useState("");
@@ -61,6 +58,7 @@ const AddSong = ({ getAllSongs }) => {
 
             <div>
               <FormControl
+                className="shadow-sm p-1 mb-1 bg-body rounded"
                 type="text"
                 onChange={(event) => setTitle(event.target.value)}
                 value={title}
@@ -73,6 +71,7 @@ const AddSong = ({ getAllSongs }) => {
             </div>
             <div>
               <FormControl
+                className="shadow-sm p-1 mb-1 bg-body rounded"
                 type="text"
                 onChange={(event) => setArtist(event.target.value)}
                 value={artist}
@@ -85,6 +84,7 @@ const AddSong = ({ getAllSongs }) => {
             </div>
             <div>
               <FormControl
+                className="shadow-sm p-1 mb-1 bg-body rounded"
                 type="text"
                 onChange={(event) => setAlbum(event.target.value)}
                 value={album}
@@ -97,6 +97,7 @@ const AddSong = ({ getAllSongs }) => {
             </div>
             <div>
               <FormControl
+                className="shadow-sm p-1 mb-1 bg-body rounded"
                 type="date"
                 onChange={(event) => setReleaseDate(event.target.value)}
                 value={release_date}
@@ -109,6 +110,7 @@ const AddSong = ({ getAllSongs }) => {
             </div>
             <div>
               <FormControl
+                className="shadow-sm p-1 mb-1 bg-body rounded"
                 type="text"
                 onChange={(event) => setGenre(event.target.value)}
                 value={genre}
