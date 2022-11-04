@@ -33,4 +33,6 @@ h4 {
   padding: 15px;
   border-radius: 5px;
   box-shadow: 5px 5px 5px #9370db;
+  border: #8a2be2;
+  border-style: solid;
 }
