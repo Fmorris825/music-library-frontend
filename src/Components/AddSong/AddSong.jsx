@@ -47,7 +47,7 @@ const AddSong = ({ getAllSongs }) => {
   }
 
   return (
-    <Container>
+    <Container id="component">
       <h4>Add Song</h4>
       <Container id="container">
         Fill in the Criteria below for the song you would like to add.

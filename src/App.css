@@ -2,17 +2,20 @@ body {
   background-color: #e6e6fa;
 }
 .Body {
-  align-items: center;
+  align-items: top;
+  margin-top: 100px;
 }
 
 h4 {
   margin: 5px;
+  font-family: Marker Felt, fantasy;
 }
 
 #button {
   margin: 5px;
-  background-color: #9400d3;
-  border: #9400d3;
+  background-color: #9370db;
+  border: #9370db;
+  box-shadow: 5px 5px 5px grey;
 }
 #button:hover {
   background-color: #e6e6fa;
@@ -22,4 +25,12 @@ h4 {
 
 #container {
   margin: 5px;
+}
+
+#component {
+  background-color: #e0cdef;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #9370db;
 }

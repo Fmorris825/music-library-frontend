@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button, Container, Form, FormControl } from "react-bootstrap";
+import "./SearchBar.css";
 
 const SearchBar = ({ filterByCriteria, getAllSongs }) => {
   const [searchCriteria, setSearchCriteria] = useState("");
@@ -11,7 +12,7 @@ const SearchBar = ({ filterByCriteria, getAllSongs }) => {
   };
 
   return (
-    <Container>
+    <Container id="component">
       <h4>Song Search</h4>
       <Container id="container">
         Enter the Title, Artist, album, Release Date, or Genre of song, to look
@@ -26,7 +27,7 @@ const SearchBar = ({ filterByCriteria, getAllSongs }) => {
           onChange={(event) => setSearchCriteria(event.target.value)}
           value={searchCriteria}
         />
-        <Container>
+        <Container id="search_buttons">
           <Button id="button" type="submit">
             Submit
           </Button>

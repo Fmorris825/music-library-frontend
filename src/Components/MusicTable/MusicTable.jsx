@@ -6,8 +6,8 @@ import DeleteButton from "../DeleteButton/DeleteButton";
 
 const MusicTable = ({ songs, getAllSongs }) => {
   return (
-    <Container>
-      <h3>Music Library</h3>
+    <Container id="component">
+      <h4>Music Library</h4>
       <Table>
         <thead>
           <tr>
