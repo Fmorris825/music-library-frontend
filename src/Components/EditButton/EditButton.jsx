@@ -58,32 +58,36 @@ const EditButton = ({ song, getAllSongs }) => {
         backdrop="static"
         keyboard={false}
       >
-        <Modal.Header closeButton>
-          <Modal.Title>Edit</Modal.Title>
+        <Modal.Header id="bgc" closeButton>
+          <Modal.Title>
+            <h4>Update Song</h4>
+          </Modal.Title>
         </Modal.Header>
 
-        <Modal.Body>
+        <Modal.Body id="bgc">
           <Form onSubmit={handleSubmit}>
             <Container>
-              <h4>Update Song</h4>
-              <FormLabel>Title</FormLabel>
+              <FormLabel>Title:</FormLabel>
               <FormControl
+                className="shadow-sm p-1 mb-1 bg-body rounded"
                 type="text"
                 id="SongData"
                 name="SongData"
                 onChange={(event) => setTitle(event.target.value)}
                 value={title}
               />
-              <FormLabel>Artist</FormLabel>
+              <FormLabel>Artist:</FormLabel>
               <FormControl
+                className="shadow-sm p-1 mb-1 bg-body rounded"
                 type="text"
                 id="SongData"
                 name="SongData"
                 onChange={(event) => setArtist(event.target.value)}
                 value={artist}
               />
-              <FormLabel>Album</FormLabel>
+              <FormLabel>Album:</FormLabel>
               <FormControl
+                className="shadow-sm p-1 mb-1 bg-body rounded"
                 type="text"
                 id="SongData"
                 name="SongData"
@@ -92,6 +96,7 @@ const EditButton = ({ song, getAllSongs }) => {
               />
               <FormLabel>Release Date</FormLabel>
               <FormControl
+                className="shadow-sm p-1 mb-1 bg-body rounded"
                 type="text"
                 id="SongData"
                 name="SongData"
@@ -100,6 +105,7 @@ const EditButton = ({ song, getAllSongs }) => {
               />
               <FormLabel>Genre</FormLabel>
               <FormControl
+                className="shadow-sm p-1 mb-1 bg-body rounded"
                 type="text"
                 id="SongData"
                 name="SongData"
@@ -107,14 +113,16 @@ const EditButton = ({ song, getAllSongs }) => {
                 value={genre}
               />
               <Container>
-                <Button type="submit">Submit</Button>
+                <Button id="button" type="submit">
+                  Submit
+                </Button>
               </Container>
             </Container>
           </Form>
         </Modal.Body>
 
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+        <Modal.Footer id="bgc">
+          <Button id="close_button" variant="secondary" onClick={handleClose}>
             Close
           </Button>
         </Modal.Footer>

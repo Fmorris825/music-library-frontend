@@ -17,6 +17,14 @@ h4 {
   border: #9370db;
   box-shadow: 5px 5px 5px grey;
 }
+
+#close_button {
+  margin: 5px;
+  background-color: #cd5c5c;
+  border: #cd5c5c;
+  box-shadow: 5px 5px 5px grey;
+}
+
 #button:hover {
   background-color: #e6e6fa;
   border: #e6e6fa;
@@ -35,4 +43,8 @@ h4 {
   box-shadow: 5px 5px 5px #9370db;
   border: #8a2be2;
   border-style: solid;
+}
+
+#bgc {
+  background-color: #e6e6fa;
 }

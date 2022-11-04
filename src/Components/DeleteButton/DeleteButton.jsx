@@ -8,6 +8,7 @@ import {
   FormLabel,
   Container,
 } from "react-bootstrap";
+import "./DeleteButton.css";
 
 const DeleteButton = ({ song, getAllSongs }) => {
   const [show, setShow] = useState(false);
@@ -43,18 +44,20 @@ const DeleteButton = ({ song, getAllSongs }) => {
         backdrop="static"
         keyboard={false}
       >
-        <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Container>
+        <Modal.Header id="bgc" closeButton>
+          <Modal.Title>
             <h4>Delete Song</h4>
-            <Container>
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body id="bgc">
+          <Container id="container">
+            <Container id="container">
               Are you sure you want to delete {song.title} by {song.artist}{" "}
               delete.
             </Container>
             <Form onSubmit={handleSubmit}>
               <FormControl
+                className="shadow-sm p-1 mb-1 bg-body rounded"
                 type="number"
                 id="SongData"
                 name="SongData"
@@ -62,13 +65,15 @@ const DeleteButton = ({ song, getAllSongs }) => {
                 value={id}
               />
               <div>
-                <Button type="submit">Submit</Button>
+                <Button id="button" type="submit">
+                  Submit
+                </Button>
               </div>
             </Form>
           </Container>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+        <Modal.Footer id="bgc">
+          <Button id="close_button" variant="secondary" onClick={handleClose}>
             Close
           </Button>
         </Modal.Footer>
