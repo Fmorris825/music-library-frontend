@@ -3,6 +3,7 @@ import { Table, Container, Button, Modal } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./MusicTable.css";
 import EditButton from "../EditButton/EditButton";
+import DeleteButton from "../DeleteButton/DeleteButton";
 
 const MusicTable = ({ songs, getAllSongs }) => {
   return (
@@ -33,10 +34,10 @@ const MusicTable = ({ songs, getAllSongs }) => {
                   <Container className="d-inline-flex p-2">
                     <EditButton
                       songs={songs}
-                      getAllSongs={getAllSongs}
                       song={song}
+                      getAllSongs={getAllSongs}
                     />
-                    <Button>Delete </Button>
+                    <DeleteButton song={song} getAllSongs={getAllSongs} />
                   </Container>
                 </td>
               </tr>
@@ -44,6 +45,7 @@ const MusicTable = ({ songs, getAllSongs }) => {
           })}
         </tbody>
       </Table>
+      <Button onClick={getAllSongs}>Refresh Table</Button>
     </Container>
   );
 };

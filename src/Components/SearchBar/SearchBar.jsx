@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button, Container, Form, FormControl } from "react-bootstrap";
 
-const SearchBar = ({ filterByCriteria }) => {
+const SearchBar = ({ filterByCriteria, getAllSongs }) => {
   const [searchCriteria, setSearchCriteria] = useState("");
 
   const handleSubmit = (event) => {
@@ -27,6 +27,7 @@ const SearchBar = ({ filterByCriteria }) => {
         />
         <Container>
           <Button type="submit">Submit</Button>
+          <Button onClick={getAllSongs}>Search Again</Button>
         </Container>
       </form>
     </Container>

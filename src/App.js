@@ -24,7 +24,7 @@ function App() {
     setSongs(response.data);
   }
 
-  function filterByCriteria(criteria) {
+  async function filterByCriteria(criteria) {
     result = songs.filter((song) => {
       return (
         song.title === criteria ||
@@ -34,20 +34,23 @@ function App() {
         song.genre === criteria
       );
     });
-    setResult(result);
+    setSongs(result);
   }
 
   return (
     <Container className="d-flex justify-content-between Body">
       <Container>
-        <SearchBar filterByCriteria={filterByCriteria} />
+        <SearchBar
+          filterByCriteria={filterByCriteria}
+          getAllSongs={getAllSongs}
+        />
         <AddSong getAllSongs={getAllSongs} />
         {/* <UpdateSong songs={songs} getAllSongs={getAllSongs} /> */}
         {/* <DeleteSong songs={songs} getAllSongs={getAllSongs} /> */}
       </Container>
       <Container>
-        <SearchTable songs={songs} getAllSongs={getAllSongs} result={result} />
-        <MusicTable songs={songs} getAllSongs={getAllSongs} result={result} />
+        {/* <SearchTable songs={songs} getAllSongs={getAllSongs} result={result} /> */}
+        <MusicTable songs={songs} getAllSongs={getAllSongs} />
       </Container>
       {/* <button onClick={() => getAllSongs()}> Get All Songs</button> */}
     </Container>

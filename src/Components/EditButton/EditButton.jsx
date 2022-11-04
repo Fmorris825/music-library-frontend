@@ -9,24 +9,23 @@ import {
 } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 
-const EditButton = (song, songs, getAllSongs) => {
+const EditButton = ({ song, getAllSongs }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const [id, setId] = useState(song.song.id);
-  const [title, setTitle] = useState(song.song.title);
-  const [artist, setArtist] = useState(song.song.artist);
-  const [album, setAlbum] = useState(song.song.album);
-  const [release_date, setReleaseDate] = useState(song.song.release_date);
-  const [genre, setGenre] = useState(song.song.genre);
+  const [id, setId] = useState(song.id);
+  const [title, setTitle] = useState(song.title);
+  const [artist, setArtist] = useState(song.artist);
+  const [album, setAlbum] = useState(song.album);
+  const [release_date, setReleaseDate] = useState(song.release_date);
+  const [genre, setGenre] = useState(song.genre);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     UpdateSong();
     handleClose();
-    getAllSongs();
   };
 
   async function UpdateSong() {
@@ -66,14 +65,6 @@ const EditButton = (song, songs, getAllSongs) => {
           <Form onSubmit={handleSubmit}>
             <Container>
               <h4>Update Song</h4>
-              <FormLabel>Song ID</FormLabel>
-              <FormControl
-                type="number"
-                id="SongData"
-                name="SongData"
-                onChange={(event) => setId(event.target.value)}
-                value={id}
-              />
               <FormLabel>Title</FormLabel>
               <FormControl
                 type="text"

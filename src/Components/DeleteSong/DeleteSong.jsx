@@ -10,8 +10,8 @@ import {
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const DeleteSong = ({ songs, getAllSongs }) => {
-  const [id, setId] = useState(0);
+const DeleteSong = ({ song, getAllSongs }) => {
+  const [id, setId] = useState(song.song.id);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -30,6 +30,10 @@ const DeleteSong = ({ songs, getAllSongs }) => {
   return (
     <Container>
       <h4>Delete Song</h4>
+      <Container>
+        Are you sure you want to delete {song.song.title} by {song.song.artist}{" "}
+        delete.
+      </Container>
       <Form onSubmit={handleSubmit}>
         <FormControl
           type="number"
