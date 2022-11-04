@@ -26,6 +26,7 @@ const EditButton = ({ song, getAllSongs }) => {
     event.preventDefault();
     UpdateSong();
     handleClose();
+    getAllSongs();
   };
 
   async function UpdateSong() {
@@ -40,7 +41,7 @@ const EditButton = ({ song, getAllSongs }) => {
       `http://127.0.0.1:8000/api/music/${id}/`,
       updateSong
     );
-    if (response.status === 201) {
+    if (response.status === 200) {
       await getAllSongs();
     }
   }

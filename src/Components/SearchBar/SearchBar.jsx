@@ -13,7 +13,7 @@ const SearchBar = ({ filterByCriteria, getAllSongs }) => {
   return (
     <Container>
       <h4>Song Search</h4>
-      <Container>
+      <Container id="container">
         Enter the Title, Artist, album, Release Date, or Genre of song, to look
         it up.
       </Container>

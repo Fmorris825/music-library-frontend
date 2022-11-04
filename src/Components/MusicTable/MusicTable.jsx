@@ -8,15 +8,15 @@ const MusicTable = ({ songs, getAllSongs }) => {
   return (
     <Container>
       <h3>Music Library</h3>
-      <Table striped hover>
+      <Table>
         <thead>
           <tr>
-            <th>Song ID</th>
-            <th>Song Title</th>
-            <th>Artist</th>
-            <th>Album</th>
-            <th>Release Date</th>
-            <th>Genre</th>
+            <th>ID:</th>
+            <th>Song Title:</th>
+            <th>Artist:</th>
+            <th>Album:</th>
+            <th>Release Date:</th>
+            <th>Genre:</th>
           </tr>
         </thead>
         <tbody>

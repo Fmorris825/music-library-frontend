@@ -49,14 +49,14 @@ const AddSong = ({ getAllSongs }) => {
   return (
     <Container>
       <h4>Add Song</h4>
-      <Container>
-        Fill in the Criteria below for the song yoou would like to add.
+      <Container id="container">
+        Fill in the Criteria below for the song you would like to add.
       </Container>
       <Form onSubmit={handleSubmit}>
         <FormGroup>
           <FormGroup>
             <div>
-              <FormLabel>Title</FormLabel>
+              <FormLabel>Title:</FormLabel>
             </div>
 
             <div>
@@ -70,7 +70,7 @@ const AddSong = ({ getAllSongs }) => {
           </FormGroup>
           <FormGroup>
             <div>
-              <FormLabel>Artist</FormLabel>
+              <FormLabel>Artist:</FormLabel>
             </div>
             <div>
               <FormControl
@@ -83,7 +83,7 @@ const AddSong = ({ getAllSongs }) => {
           </FormGroup>
           <FormGroup>
             <div>
-              <FormLabel>Album</FormLabel>
+              <FormLabel>Album:</FormLabel>
             </div>
             <div>
               <FormControl
@@ -96,7 +96,7 @@ const AddSong = ({ getAllSongs }) => {
           </FormGroup>
           <FormGroup>
             <div>
-              <FormLabel>Release Date</FormLabel>
+              <FormLabel>Release Date:</FormLabel>
             </div>
             <div>
               <FormControl
@@ -109,7 +109,7 @@ const AddSong = ({ getAllSongs }) => {
           </FormGroup>
           <FormGroup>
             <div>
-              <FormLabel>Genre</FormLabel>
+              <FormLabel>Genre:</FormLabel>
             </div>
             <div>
               <FormControl

@@ -19,3 +19,7 @@ h4 {
   border: #e6e6fa;
   color: #8a2be2;
 }
+
+#container {
+  margin: 5px;
+}
