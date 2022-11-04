@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "/Users/fredmorris/DevCodeCamp/music-library-frontend/src/App.css";
 import { Button, Container, Form, FormControl } from "react-bootstrap";
 
 const SearchBar = ({ filterByCriteria, getAllSongs }) => {
