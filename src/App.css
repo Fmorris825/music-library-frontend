@@ -9,6 +9,7 @@ body {
 h4 {
   margin: 5px;
   font-family: Marker Felt, fantasy;
+  text-shadow: 5px 5px 4px #9370db;
 }
 
 #button {
