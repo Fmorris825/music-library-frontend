@@ -2,13 +2,26 @@ import { useState } from "react";
 import { Button, Container, Form, FormControl } from "react-bootstrap";
 import "./SearchBar.css";
 
-const SearchBar = ({ filterByCriteria, getAllSongs }) => {
+const SearchBar = ({ setSongs, getAllSongs, songs }) => {
   const [searchCriteria, setSearchCriteria] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    let searchBox = document.querySelector("#searchCriteria");
-    filterByCriteria(searchBox.value);
+    const result = songs.filter((song) => {
+      return (
+        song.title.includes(searchCriteria) ||
+        song.artist.includes(searchCriteria) ||
+        song.album.includes(searchCriteria) ||
+        song.release_date.includes(searchCriteria) ||
+        song.genre.includes(searchCriteria)
+      );
+    });
+    setSongs(result);
+  };
+
+  const handleClear = () => {
+    setSearchCriteria("");
+    getAllSongs();
   };
 
   return (
@@ -31,7 +44,7 @@ const SearchBar = ({ filterByCriteria, getAllSongs }) => {
           <Button id="button" type="submit">
             Submit
           </Button>
-          <Button id="button" onClick={getAllSongs}>
+          <Button id="button" onClick={handleClear}>
             Search Again
           </Button>
         </Container>

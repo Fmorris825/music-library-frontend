@@ -13,8 +13,6 @@ import "./App.css";
 
 function App() {
   const [songs, setSongs] = useState([]);
-  let [result, setResult] = useState([]);
-  // const [searchCriteria, setSearchCriteria] = useState("");
 
   useEffect(() => {
     getAllSongs();
@@ -25,26 +23,14 @@ function App() {
     setSongs(response.data);
   }
 
-  async function filterByCriteria(criteria) {
-    result = songs.filter((song) => {
-      return (
-        song.title === criteria ||
-        song.artist === criteria ||
-        song.album === criteria ||
-        song.release_date === criteria ||
-        song.genre === criteria
-      );
-    });
-    setSongs(result);
-  }
-
   return (
     <div>
       <NavBar />
       <Container className="d-flex justify-content-between Body">
         <Container>
           <SearchBar
-            filterByCriteria={filterByCriteria}
+            songs={songs}
+            setSongs={setSongs}
             getAllSongs={getAllSongs}
           />
           <AddSong getAllSongs={getAllSongs} />

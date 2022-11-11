@@ -21,7 +21,7 @@ const AddSong = ({ getAllSongs }) => {
     event.preventDefault();
     // let newSongForm = document.querySelector("#SongData");
     // console.log(title, artist, album, release_date, genre);
-    addSong("");
+    addSong();
     setTitle("");
     setArtist("");
     setAlbum("");
